@@ -3,5 +3,7 @@
 // }
 
 {
-  "extends": [ "plugin:@next/next/recommended"]
+  "extends": [ "plugin:@next/next/recommended"],
+  "parser": "babel-eslint"
 }
+
