@@ -4,6 +4,6 @@
 
 {
   "extends": [ "plugin:@next/next/recommended"],
-  "parser": "babel-eslint"
+  "parser": "@babel/eslint-parser"
 }
 
