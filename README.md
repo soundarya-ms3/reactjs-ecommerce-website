@@ -1,6 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Modern Full Stack ECommerce Application with Stripe & Sanity
+
+A Next.js E-commerce app with Sanity.io and Stripe API. Built with TailwindCSS framework 
+
+![image](https://user-images.githubusercontent.com/70798723/218365328-9ae85632-74b6-4811-abb5-0f5a4d779cc1.png)
+
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
@@ -18,21 +25,30 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Run the app locally
+To run this app locally, you need to have Sanity.io and Stripe accounts.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Setting up Sanity
++ Head over to the Sanity.io's getting started page and generate a blank template
++ Copy the schema files located in sanity/schemas from this project to your sanity project's schemas directory
++ Make sure to replace the client configuration found under src/lib/sanity/client.ts with your own Sanity project
 
-## Learn More
+### Setting up Stripe
++ Create a Stripe account
++ Make sure to enable Test mode first
++ Submit basic account details to enable test mode payment
 
-To learn more about Next.js, take a look at the following resources:
+### Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+It is important to provide the following environment variables in order for this project to run properly locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
++ SANITY_PROJECT_TOKEN - Found under https://www.sanity.io/manage then select your project and then go to API -> Tokens
 
-## Deploy on Vercel
++ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY - This can be found in your Stripe's dashboard
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
++ STRIPE_SECRET_KEY - This can be found in your Stripe's dashboard
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Demo Link
+https://drive.google.com/file/d/1GkrUVzLkscShTSfRT5in0psUlP-mfOf8/view?usp=share_link
+
+
